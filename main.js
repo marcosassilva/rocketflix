@@ -10,6 +10,7 @@ let poster = document.getElementById('poster');
 let releaseDate = ""
 
 
+
 document.getElementById("buscarFilme").addEventListener('click', renderMovie);
 
 /* function rodar() {
@@ -37,17 +38,18 @@ function renderMovie() {
     while (description.innerHTML == "") {
       getMovie()
     }
-    description.style.visibility = "visible"
-    poster.style.visibility = 'visible'
-    title.style.visibility = "visible"
+    poster.removeAttribute("hidden")
+    title.removeAttribute("hidden")
+    description.removeAttribute("hidden")
+
   })
   .catch(err => {
     console.log(err)
     document.querySelector('h1').innerText = "Não encontramos nenhum filme, tente novamente!"
     document.querySelector('h1').style.textAlign = 'center'
-    description.style.visibility = "hidden"
-    poster.style.visibility = 'hidden'
-    title.style.visibility = "hidden"
+    poster.setAttribute("hidden", "")
+    title.setAttribute("hidden", "")
+    description.setAttribute("hidden", "")
   })
 }
 
