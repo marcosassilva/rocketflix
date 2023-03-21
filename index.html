@@ -15,10 +15,23 @@
     <div class="container">
         <img src="assets/logo.png" alt="Logo">
         <h1>Não sabe o que assistir?</h1>
+        <div class="genre-container">
+            <p>Escolha o gênero que você quer assistir.</p>
+            <select name="genre" id="genre">
+                <option value="Aventura">Aventura</option>
+                <option value="Ação">Ação</option>
+                <option value="Drama">Drama</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Romance">Romance</option>
+                <option value="Comédia">Comédia</option>
+<!--                 <option value="Ficção Científica">Ficção Científica</option> -->
+<!--                 <option value="Animação">Animação</option> -->
+            </select>
+        </div>
         <div hidden class="movie-info">
             <img hidden src="" alt="Poster do Filme" id="poster">
-            <div id="title"></div>
-            <div id="description"></div>
+            <div hidden id="title"></div>
+            <div hidden id="description"></div>
         </div>
         <button id="buscarFilme">
             <img src="assets/logo.png" alt="">
